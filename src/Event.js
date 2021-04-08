@@ -18,13 +18,10 @@ class Event extends Component {
     const { event } = this.props;
     return (
       <div className='event'>
-        <h1 className='eventName'>{event.summary}</h1>
-        <p className='eventLocation'>{event.location}</p>
 
         {this.state.showHideDetails && (
           <div className='eventDetails'>
             <h2>About event:</h2>
-            <p>{event.description}</p>
           </div>
         )}
 

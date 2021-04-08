@@ -3,39 +3,21 @@ import './App.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
-import Event from './Event'
 
 class App extends Component {
+  state = {
+    events: [],
+    locations: []
+  }
   render() {
     return (
       <div className="App">
-        {/* <EventList /> */}
-        {/* <Event /> */}
-        <CitySearch />
+        <CitySearch locations={this.state.locations} />
+        <EventList events={this.state.events} />
         <NumberOfEvents />
       </div>
     );
   }
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;
