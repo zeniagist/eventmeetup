@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class CitySearch extends Component {
   state = {
     query: '',
+    suggestions: []
   }
 
   // update state of city in text input
@@ -23,7 +24,12 @@ class CitySearch extends Component {
         />
         {/* list of suggested cities */}
         <ul className='suggestions'>
-
+          {this.state.suggestions.map((suggestion) => (
+            <li key={suggestion}>{suggestion}</li>
+          ))}
+          <li key='all'>
+            <b>See all cities</b>
+          </li>
         </ul>
       </div>
     );
