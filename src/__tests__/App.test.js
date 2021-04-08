@@ -12,9 +12,9 @@ describe('<App /> component', () => {
   });
 
   // show upcoming events
-  test('render list of events', () => {
-    expect(AppWrapper.find(EventList)).toHaveLength(1);
-  });
+  // test('render list of events', () => {
+  //   expect(AppWrapper.find(EventList)).toHaveLength(1);
+  // });
 
   //show a list of suggestions during search
   test('render CitySearch', () => {
@@ -22,8 +22,8 @@ describe('<App /> component', () => {
   });
 
   // show number of events
-  // test('render number of events component', () => {
-  //   expect(AppWrapper.find(NumberOfEvents)).toHaveLength(1);
-  // });
+  test('render number of events component', () => {
+    expect(AppWrapper.find(NumberOfEvents)).toHaveLength(1);
+  });
 
 });
