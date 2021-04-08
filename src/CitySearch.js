@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class CitySearch extends Component {
   state = {
     query: '',
-    suggestions: []
+    suggestions: [],
+    showSuggestions: undefined
   }
 
   // update state of city in text input
@@ -21,7 +22,8 @@ class CitySearch extends Component {
   // update query state when clicking suggested
   handleItemClicked = (suggestion) => {
     this.setState({
-      query: suggestion
+      query: suggestion,
+      showSuggestions: false
     });
 
     this.props.updateEvents(suggestion);
@@ -37,9 +39,13 @@ class CitySearch extends Component {
           value={this.state.query}
           onChange={this.handleInputChanged}
           placeholder='Search for a city'
+          onFocus={() => { this.setState({ showSuggestions: true }) }}
         />
         {/* list of suggested cities */}
-        <ul className='suggestions'>
+        <ul
+          className='suggestions'
+          style={this.state.showSuggestions ? {} : { display: 'none' }}
+        >
           {this.state.suggestions.map((suggestion) => (
             <li
               key={suggestion}
