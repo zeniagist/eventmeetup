@@ -18,6 +18,13 @@ class CitySearch extends Component {
     });
   }
 
+  // update query state when clicking suggested
+  handleItemClicked = (suggestion) => {
+    this.setState({
+      query: suggestion
+    });
+  }
+
   render() {
     return (
       <div className='CitySearch'>
@@ -31,7 +38,10 @@ class CitySearch extends Component {
         {/* list of suggested cities */}
         <ul className='suggestions'>
           {this.state.suggestions.map((suggestion) => (
-            <li key={suggestion}>{suggestion}</li>
+            <li
+              key={suggestion}
+              onClick={() => this.handleItemClicked(suggestion)}
+            >{suggestion}</li>
           ))}
           <li key='all'>
             <b>See all cities</b>
