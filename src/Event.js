@@ -1,8 +1,41 @@
 import React, { Component } from 'react';
 
 class Event extends Component {
+  state = {
+    showHideDetails: false,
+  };
+
+  // show details button
+  handleShowButton = () => {
+    if (this.state.showHideDetails === true) {
+      this.setState({ showHideDetails: false });
+    } else {
+      this.setState({ showHideDetails: true });
+    }
+  };
+
   render() {
-    return <div></div>;
+    const { event } = this.props;
+    return (
+      <div className='event'>
+        <h1 className='eventName'>{event.summary}</h1>
+        <p className='eventLocation'>{event.location}</p>
+
+        {this.state.showHideDetails && (
+          <div className='eventDetails'>
+            <h2>About event:</h2>
+            <p>{event.description}</p>
+          </div>
+        )}
+
+        <button
+          className='showDetailsButton'
+          onClick={() => this.handleShowButton()}
+        >
+          {!this.state.showHideDetails ? 'Show Details' : 'Hide Details'}
+        </button>
+      </div>
+    );
   }
 }
 
