@@ -4,7 +4,7 @@ class CitySearch extends Component {
   state = {
     query: '',
     suggestions: [],
-    showSuggestions: undefined
+    showSuggestions: false
   }
 
   // update state of city in text input
@@ -26,7 +26,7 @@ class CitySearch extends Component {
       showSuggestions: false
     });
 
-    this.props.updateEvents(suggestion);
+    this.props.updateEvents(suggestion, 0);
   }
 
   render() {
@@ -40,6 +40,7 @@ class CitySearch extends Component {
           onChange={this.handleInputChanged}
           placeholder='Search for a city'
           onFocus={() => { this.setState({ showSuggestions: true }) }}
+          onClick={() => { this.setState({ showSuggestions: true }) }}
         />
         {/* list of suggested cities */}
         <ul
