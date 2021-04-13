@@ -26,6 +26,10 @@ p {
   margin: 5px 0;
 }
 
+.eventTitle{
+  font-size: 3em;
+}
+
 .display-none {
   display: none;
 }
@@ -34,7 +38,7 @@ p {
 }
 
 h1{
-  font-size: 2em;
+  font-size: 2em;  
 }
 
 label{
@@ -76,6 +80,7 @@ input[type="number"] {
   top: 43px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
+  color: black;
 }
 
 .suggestions > li {
@@ -103,6 +108,7 @@ input[type="number"] {
   position: relative;
   background-color: rgba(99,44,33, 0.8);
   color: white;
+  border-radius: 15px;
 }
 
 .event:hover{
@@ -115,9 +121,6 @@ input[type="number"] {
   right: 5px;
   bottom: 5px;
   padding: 5px 8px;
-  /* border-radius: 4px;
-  outline: none;
-  cursor: pointer; */
   box-shadow:inset 0px 1px 0px 0px #ffffff;
 	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
 	background-color:#ffffff;
@@ -130,6 +133,7 @@ input[type="number"] {
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;
+  font-size: 1.2em;
 }
 
 .showDetailsButton:hover {
