@@ -17,7 +17,7 @@ class Event extends Component {
   render() {
     const { event } = this.props;
     return (
-      <div className='event'>
+      <div className='event' onClick={() => this.handleShowButton()}>
         <h1 className='eventName'>{event.summary}</h1>
         <p className='eventLocation'>{event.location}</p>
 
