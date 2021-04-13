@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/eventmeetup/static/css/main.2e519a5d.chunk.css",
-    "main.js": "/eventmeetup/static/js/main.26a822da.chunk.js",
-    "main.js.map": "/eventmeetup/static/js/main.26a822da.chunk.js.map",
+    "main.js": "/eventmeetup/static/js/main.5c30c678.chunk.js",
+    "main.js.map": "/eventmeetup/static/js/main.5c30c678.chunk.js.map",
     "runtime-main.js": "/eventmeetup/static/js/runtime-main.060b63d3.js",
     "runtime-main.js.map": "/eventmeetup/static/js/runtime-main.060b63d3.js.map",
-    "static/js/2.0e0fca6d.chunk.js": "/eventmeetup/static/js/2.0e0fca6d.chunk.js",
-    "static/js/2.0e0fca6d.chunk.js.map": "/eventmeetup/static/js/2.0e0fca6d.chunk.js.map",
+    "static/js/2.b4a2e1a1.chunk.js": "/eventmeetup/static/js/2.b4a2e1a1.chunk.js",
+    "static/js/2.b4a2e1a1.chunk.js.map": "/eventmeetup/static/js/2.b4a2e1a1.chunk.js.map",
     "static/js/3.c4da7652.chunk.js": "/eventmeetup/static/js/3.c4da7652.chunk.js",
     "static/js/3.c4da7652.chunk.js.map": "/eventmeetup/static/js/3.c4da7652.chunk.js.map",
     "index.html": "/eventmeetup/index.html",
     "service-worker.js": "/eventmeetup/service-worker.js",
     "service-worker.js.map": "/eventmeetup/service-worker.js.map",
     "static/css/main.2e519a5d.chunk.css.map": "/eventmeetup/static/css/main.2e519a5d.chunk.css.map",
-    "static/js/2.0e0fca6d.chunk.js.LICENSE.txt": "/eventmeetup/static/js/2.0e0fca6d.chunk.js.LICENSE.txt"
+    "static/js/2.b4a2e1a1.chunk.js.LICENSE.txt": "/eventmeetup/static/js/2.b4a2e1a1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.060b63d3.js",
-    "static/js/2.0e0fca6d.chunk.js",
+    "static/js/2.b4a2e1a1.chunk.js",
     "static/css/main.2e519a5d.chunk.css",
-    "static/js/main.26a822da.chunk.js"
+    "static/js/main.5c30c678.chunk.js"
   ]
 }
