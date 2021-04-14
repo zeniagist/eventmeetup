@@ -1,6 +1,6 @@
 # Event Meetup App
 
-Event Meetup App is a progressive web application built with React hosted by a serverless function with AWS using the test-driven development (TDD) approach. [Google Calendar API](https://developers.google.com/calendar) is implimented to fetch upcoming events.
+Event Meetup App is a progressive web application built with React hosted by a serverless function with AWS using the test-driven development (TDD) approach. [Google Calendar API](https://developers.google.com/calendar) is implimented to fetch upcoming events while can be downloaded for offline use.
 
 Users can search for a city and view a list of events hosted in the selected city. The app also allows a user to view charts that display how many events will take place on certain days as well view the popularity of the event.
 
