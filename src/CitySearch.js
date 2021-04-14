@@ -42,7 +42,6 @@ class CitySearch extends Component {
   render() {
     return (
       <div className='CitySearch'>
-        <h1 className='eventTitle'>Event Meetup App</h1>
         <label>Choose your nearest city</label>
         {/* text input */}
         <input

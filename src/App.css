@@ -12,7 +12,7 @@ body{
   font-family: Roboto, serif;
   color: white;
   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-    url("https://cdn.pixabay.com/photo/2016/11/19/14/56/backpack-1839705_960_720.jpg") no-repeat center center;
+    url('./travel.jpg') no-repeat center center;
   background-attachment: fixed;
   background-size: cover;
 }
