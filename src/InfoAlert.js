@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class InfoAlert extends Component {
   constructor(props) {
     super(props);
-    this.color = 'yellow';
+    this.color = 'blue';
   }
 
   getStyle = () => {
