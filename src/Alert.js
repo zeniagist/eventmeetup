@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Alert extends Component {
   constructor(props) {
     super(props);
-    this.color = 'blue';
+    this.color = null;
   }
 
   getStyle = () => {
