@@ -34,41 +34,24 @@ class App extends Component {
   // load events with app
   componentDidMount() {
     this.mounted = true;
-    // Try to load localEvent
+
     if (!navigator.onLine) {
       this.setState({
         infoText:
-          'You are not connected from internet(data may not be up to date)',
+          'You are currently using the app offline and viewing data from your last visit. Data will not be up-to-date.',
       });
     } else {
       this.setState({
         infoText: '',
       });
     }
+
     getEvents().then((events) => {
       if (this.mounted) {
         this.setState({ events, locations: extractLocations(events) });
       }
     });
   }
-  // componentDidMount() {
-  //   this.mounted = true;
-
-  //   if (!navigator.onLine) {
-  //     this.setState({
-  //       warningText:
-  //         'You are currently using the app offline and viewing data from your last visit. Data will not be up-to-date.',
-  //     })
-  //   } else {
-  //     this.setState({ warningText: '' })
-  //   }
-
-  //   getEvents().then((events) => {
-  //     if (this.mounted) {
-  //       this.setState({ events, locations: extractLocations(events) });
-  //     }
-  //   });
-  // }
 
   componentWillUnmount() {
     this.mounted = false;
