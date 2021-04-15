@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/eventmeetup/static/css/main.005009ad.chunk.css",
-    "main.js": "/eventmeetup/static/js/main.7160703d.chunk.js",
-    "main.js.map": "/eventmeetup/static/js/main.7160703d.chunk.js.map",
+    "main.js": "/eventmeetup/static/js/main.5c3b9dec.chunk.js",
+    "main.js.map": "/eventmeetup/static/js/main.5c3b9dec.chunk.js.map",
     "runtime-main.js": "/eventmeetup/static/js/runtime-main.b30f144a.js",
     "runtime-main.js.map": "/eventmeetup/static/js/runtime-main.b30f144a.js.map",
     "static/js/2.f2bfb04e.chunk.js": "/eventmeetup/static/js/2.f2bfb04e.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.b30f144a.js",
     "static/js/2.f2bfb04e.chunk.js",
     "static/css/main.005009ad.chunk.css",
-    "static/js/main.7160703d.chunk.js"
+    "static/js/main.5c3b9dec.chunk.js"
   ]
 }
