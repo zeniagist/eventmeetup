@@ -9,6 +9,7 @@ import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { getEvents, extractLocations } from './api';
 import InfoAlert from './InfoAlert';
+import EventGenre from './EventGenre';
 
 class App extends Component {
   state = {
@@ -73,27 +74,33 @@ class App extends Component {
   }
 
   render() {
+    const { events } = this.state;
     return (
       <div className="App">
         <InfoAlert text={this.state.infoText} />
         <h1 className='eventTitle'>Event Meetup App</h1>
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents updateEvents={this.updateEvents} />
-        <h4>Events in each city</h4>
-
-        <ResponsiveContainer height={400} >
-          <ScatterChart
-            margin={{
-              top: 20, right: 20, bottom: 20, left: 20,
-            }}
-          >
-            <CartesianGrid />
-            <XAxis type="category" dataKey="city" name="city" />
-            <YAxis type="number" dataKey="number" name="number of events" allowDecimals={false} />
-            <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-            <Scatter data={this.getData()} fill="#8884d8" />
-          </ScatterChart>
-        </ResponsiveContainer>
+        <h1 className='chartLabel'>Events in each city</h1>
+        <div className='data-vis-wrapper'>
+          {/* pie chart */}
+          <EventGenre events={events} />
+          {/* scatter plot */}
+          <ResponsiveContainer height={400} >
+            <ScatterChart
+              margin={{
+                // top: 20, right: 20, bottom: 20, left: 20,
+                top: 30, right: 30, bottom: 5, left: 0,
+              }}
+            >
+              <CartesianGrid />
+              <XAxis type="category" dataKey="city" name="city" />
+              <YAxis type="number" dataKey="number" name="number of events" allowDecimals={false} />
+              <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+              <Scatter data={this.getData()} fill="#632c21" />
+            </ScatterChart>
+          </ResponsiveContainer>
+        </div>
         <EventList events={this.state.events} />
       </div>
     );
