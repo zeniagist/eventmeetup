@@ -6,7 +6,7 @@ Users can search for a city and view a list of events hosted in the selected cit
 
 See the **hosted project** [here](https://zeniagist.github.io/eventmeetup/). <br />
 
-![Meet App](src/img/meet.png)
+![Meet App](src/eventmeetup.jpg)
 
 ## Quick Start 🚀
 
