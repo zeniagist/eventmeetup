@@ -16,6 +16,7 @@ class App extends Component {
   state = {
     events: [],
     locations: [],
+    tokenCheck: false,
   }
 
   // get location
@@ -49,7 +50,25 @@ class App extends Component {
   };
 
   // load events with app
-  componentDidMount() {
+  async componentDidMount() {
+    // check if user is logged in
+    const accessToken = localStorage.getItem("access_token");
+    const validToken = accessToken !== null ? await
+
+    checkToken(accessToken) : false;
+    this.setState({ tokenCheck: validToken });
+    if(validToken === true) this.updateEvents();
+    const searchParams = new URLSearchParams(window.location.search);
+    const code = searchParams.get("code");
+
+    // load app
+    this.mounted = true;
+    
+    if (code && this.mounted === true && validToken === false) {
+      this.setState({tokenCheck: true });
+      this.updateEvents()
+    }
+
     this.mounted = true;
 
     if (!navigator.onLine) {
