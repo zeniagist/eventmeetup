@@ -8,7 +8,7 @@ import Login from "./Login";
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
-import { getEvents, extractLocations } from './api';
+import { getEvents, extractLocations, checkToken } from './api';
 import InfoAlert from './InfoAlert';
 import EventGenre from './EventGenre';
 
