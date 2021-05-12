@@ -1,18 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 .App {
   text-align: center;
-  padding: 2% 5%;  
+  padding: 2% 5%;
 }
 
 .App * {
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: Roboto, serif;
   color: white;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-    url('./travel.jpg') no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./travel.jpg") no-repeat center center;
   background-attachment: fixed;
   background-size: cover;
 }
@@ -26,7 +26,7 @@ p {
   margin: 5px 0;
 }
 
-.eventTitle{
+.eventTitle {
   font-size: 3.5em;
   font-weight: 400;
   text-shadow: 2px 2px #000000;
@@ -39,11 +39,11 @@ p {
   display: block;
 }
 
-h1{
-  font-size: 2em;  
+h1 {
+  font-size: 2em;
 }
 
-label{
+label {
   font-size: 1.5em;
   text-shadow: 2px 2px #000000;
 }
@@ -73,7 +73,7 @@ input[type="number"] {
   position: relative;
 }
 
-.suggestions{
+.suggestions {
   color: black;
   z-index: 2;
   margin: 0;
@@ -105,14 +105,14 @@ input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
-  background-color: rgba(99,44,33, 0.4);
+  background-color: rgba(99, 44, 33, 0.4);
   color: white;
   border-radius: 15px;
 }
 
-.event:hover{
+.event:hover {
   cursor: pointer;
-  background-color: rgb(99,44,33);
+  background-color: rgb(99, 44, 33);
 }
 
 .showDetailsButton {
@@ -120,28 +120,28 @@ input[type="number"] {
   right: 5px;
   bottom: 5px;
   padding: 5px 8px;
-  box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-	background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#632c21;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #632c21;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
   font-size: 1.2em;
 }
 
 .showDetailsButton:hover {
-	background:linear-gradient(to bottom, #0000 5%, #0000 100%);
-	background-color:#f6f6f6;
+  background: linear-gradient(to bottom, #0000 5%, #0000 100%);
+  background-color: #f6f6f6;
 }
 .showDetailsButton:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
 
 .name {
@@ -177,7 +177,7 @@ input[type="number"] {
   font-family: sans-serif;
 }
 
-.chartLabel{
+.chartLabel {
   font-size: 2.5em;
   text-shadow: 2px 2px #000000;
   font-weight: 400;
@@ -198,6 +198,7 @@ input[type="number"] {
   overflow: visible;
 }
 
+/* Login Page */
 .login-button {
   color: #494949;
   text-transform: uppercase;
