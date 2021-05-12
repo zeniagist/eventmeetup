@@ -4,6 +4,7 @@ import {
   ResponsiveContainer
 } from 'recharts';
 import './App.css';
+import Login from "./Login";
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
