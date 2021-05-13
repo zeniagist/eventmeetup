@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/eventmeetup/static/css/main.93a46d21.chunk.css",
-    "main.js": "/eventmeetup/static/js/main.7e9b82e7.chunk.js",
-    "main.js.map": "/eventmeetup/static/js/main.7e9b82e7.chunk.js.map",
-    "runtime-main.js": "/eventmeetup/static/js/runtime-main.a84d96c1.js",
-    "runtime-main.js.map": "/eventmeetup/static/js/runtime-main.a84d96c1.js.map",
-    "static/js/2.2e070f06.chunk.js": "/eventmeetup/static/js/2.2e070f06.chunk.js",
-    "static/js/2.2e070f06.chunk.js.map": "/eventmeetup/static/js/2.2e070f06.chunk.js.map",
-    "static/js/3.85fd255d.chunk.js": "/eventmeetup/static/js/3.85fd255d.chunk.js",
-    "static/js/3.85fd255d.chunk.js.map": "/eventmeetup/static/js/3.85fd255d.chunk.js.map",
+    "main.css": "/eventmeetup/static/css/main.9a8a7c46.chunk.css",
+    "main.js": "/eventmeetup/static/js/main.49f268af.chunk.js",
+    "main.js.map": "/eventmeetup/static/js/main.49f268af.chunk.js.map",
+    "runtime-main.js": "/eventmeetup/static/js/runtime-main.699ebcf0.js",
+    "runtime-main.js.map": "/eventmeetup/static/js/runtime-main.699ebcf0.js.map",
+    "static/js/2.5f545790.chunk.js": "/eventmeetup/static/js/2.5f545790.chunk.js",
+    "static/js/2.5f545790.chunk.js.map": "/eventmeetup/static/js/2.5f545790.chunk.js.map",
+    "static/js/3.c5eae47c.chunk.js": "/eventmeetup/static/js/3.c5eae47c.chunk.js",
+    "static/js/3.c5eae47c.chunk.js.map": "/eventmeetup/static/js/3.c5eae47c.chunk.js.map",
     "index.html": "/eventmeetup/index.html",
     "service-worker.js": "/eventmeetup/service-worker.js",
     "service-worker.js.map": "/eventmeetup/service-worker.js.map",
-    "static/css/main.93a46d21.chunk.css.map": "/eventmeetup/static/css/main.93a46d21.chunk.css.map",
-    "static/js/2.2e070f06.chunk.js.LICENSE.txt": "/eventmeetup/static/js/2.2e070f06.chunk.js.LICENSE.txt",
+    "static/css/main.9a8a7c46.chunk.css.map": "/eventmeetup/static/css/main.9a8a7c46.chunk.css.map",
+    "static/js/2.5f545790.chunk.js.LICENSE.txt": "/eventmeetup/static/js/2.5f545790.chunk.js.LICENSE.txt",
     "static/media/App.css": "/eventmeetup/static/media/travel.8b93c007.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a84d96c1.js",
-    "static/js/2.2e070f06.chunk.js",
-    "static/css/main.93a46d21.chunk.css",
-    "static/js/main.7e9b82e7.chunk.js"
+    "static/js/runtime-main.699ebcf0.js",
+    "static/js/2.5f545790.chunk.js",
+    "static/css/main.9a8a7c46.chunk.css",
+    "static/js/main.49f268af.chunk.js"
   ]
 }
