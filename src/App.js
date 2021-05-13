@@ -1,36 +1,56 @@
-import React, { Component } from 'react';
-import {
-  ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer
-} from 'recharts';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import "./nprogress.css";
+import EventList from "./EventList";
+import CitySearch from "./CitySearch";
 import Login from "./Login";
-import EventList from './EventList';
-import CitySearch from './CitySearch';
-import NumberOfEvents from './NumberOfEvents';
-import { getEvents, extractLocations, checkToken } from './api';
+import NumberOfEvents from "./NumberOfEvents";
+import { getEvents, checkToken, getToken } from "./api";
 import InfoAlert from './InfoAlert';
-import EventGenre from './EventGenre';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, } from "recharts";
+import EventGenre from "./EventGenre";
 
 class App extends Component {
   state = {
     events: [],
+    page: null,
+    currentLocation: "all",
+    offlineText: "",
+    numberOfEvents: 32,
     locations: [],
     tokenCheck: false,
+  };
+
+  async componentDidMount() {
+    const accessToken = localStorage.getItem("access_token");
+    const validToken = accessToken !== null  ? await checkToken(accessToken) : false;
+    this.setState({ tokenCheck: validToken });
+    if(validToken === true) this.updateEvents()
+    const searchParams = new URLSearchParams(window.location.search);
+    const code = searchParams.get("code");
+
+    this.mounted = true;
+    if (code && this.mounted === true && validToken === false){ 
+      this.setState({tokenCheck:true });
+      this.updateEvents()
+    }
   }
 
-  // get location
+  componentWillUnmount() {
+    this.mounted = false;
+  }
+
   getData = () => {
     const { locations, events } = this.state;
     const data = locations.map((location) => {
-      const number = events.filter((event) => event.location === location).length
-      const city = location.split(' ').shift()
+      const number = events.filter((event) => event.location === location)
+        .length;
+      const city = location.split(" ").shift();
       return { city, number };
-    })
+    });
     return data;
   };
 
-  // update events
   updateEvents = (location, eventCount) => {
     let locationEvents;
     getEvents().then((events) => {
@@ -49,57 +69,13 @@ class App extends Component {
     });
   };
 
-  // load events with app
-  async componentDidMount() {
-    // check if user is logged in
-    const accessToken = localStorage.getItem("access_token");
-    const validToken = accessToken !== null ? await
-
-    checkToken(accessToken) : false;
-    this.setState({ tokenCheck: validToken });
-    if(validToken === true) this.updateEvents();
-    const searchParams = new URLSearchParams(window.location.search);
-    const code = searchParams.get("code");
-
-    // load app
-    this.mounted = true;
-    
-    if (code && this.mounted === true && validToken === false) {
-      this.setState({tokenCheck: false });
-      this.updateEvents()
-    }
-
-    this.mounted = true;
-
-    if (!navigator.onLine) {
-      this.setState({
-        infoText:
-          'You are currently using the app offline and viewing data from your last visit. Data will not be up-to-date.',
-      });
-    } else {
-      this.setState({
-        infoText: '',
-      });
-    }
-
-    getEvents().then((events) => {
-      if (this.mounted) {
-        this.setState({ events, locations: extractLocations(events) });
-      }
-    });
-  }
-
-  componentWillUnmount() {
-    this.mounted = false;
-  }
-
   render() {
-    const { events } = this.state;
-    return this.state.tokenCheck === false ? (
+    const { events, tokenCheck } = this.state;
+    return tokenCheck === false ? (
       <div className="App">
         <Login />
       </div>
-      ) : (
+    ) : (
       <div className="App">
         <InfoAlert text={this.state.infoText} />
         <h1 className='eventTitle'>Event Meetup App</h1>
