@@ -65,7 +65,7 @@ class App extends Component {
     this.mounted = true;
     
     if (code && this.mounted === true && validToken === false) {
-      this.setState({tokenCheck: true });
+      this.setState({tokenCheck: false });
       this.updateEvents()
     }
 
@@ -95,7 +95,11 @@ class App extends Component {
 
   render() {
     const { events } = this.state;
-    return (
+    return this.state.tokenCheck === false ? (
+      <div className="App">
+        <Login />
+      </div>
+      ) : (
       <div className="App">
         <InfoAlert text={this.state.infoText} />
         <h1 className='eventTitle'>Event Meetup App</h1>
