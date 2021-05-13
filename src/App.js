@@ -5,7 +5,7 @@ import EventList from "./EventList";
 import CitySearch from "./CitySearch";
 import Login from "./Login";
 import NumberOfEvents from "./NumberOfEvents";
-import { getEvents, checkToken, getToken } from "./api";
+import { getEvents, checkToken, getToken, extractLocations } from "./api";
 import InfoAlert from './InfoAlert';
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, } from "recharts";
 import EventGenre from "./EventGenre";
@@ -32,8 +32,21 @@ class App extends Component {
     this.mounted = true;
     if (code && this.mounted === true && validToken === false){ 
       this.setState({tokenCheck:true });
-      this.updateEvents()
+      this.updateEvents();
     }
+
+    if (!navigator.onLine) {
+      this.setState({
+        infoText:
+          'You are currently using the app offline and viewing data from your last visit. Data will not be up-to-date.',
+      });
+    } else {
+      this.setState({
+        infoText: '',
+      });
+    }
+
+    
   }
 
   componentWillUnmount() {
@@ -62,6 +75,11 @@ class App extends Component {
       } else if (location === '' && eventCount > 0) {
         locationEvents = events.slice(0, eventCount);
       }
+
+      if (this.mounted) {
+        this.setState({ events, locations: extractLocations(events) });
+      }
+      
       this.setState({
         events: locationEvents,
         eventCount,
