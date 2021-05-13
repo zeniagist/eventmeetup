@@ -4,7 +4,7 @@ Event Meetup App is a progressive web application built with React hosted by a s
 
 Users can search for a city and view a list of events hosted in the selected city. The app also allows a user to view charts that display how many events will take place on certain days as well view the popularity of the event.
 
-See the **hosted project** [here](https://zeniagist.github.io/eventmeetup/). <br />
+**See the hosted project [here](https://zeniagist.github.io/eventmeetup/).**
 
 ![Meet App](src/eventmeetup.jpg)
 
