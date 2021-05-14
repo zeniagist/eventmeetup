@@ -4,6 +4,7 @@ import "./nprogress.css";
 import EventList from "./EventList";
 import CitySearch from "./CitySearch";
 import Login from "./Login";
+import Home from "./Home";
 import NumberOfEvents from "./NumberOfEvents";
 import { getEvents, checkToken, getToken, extractLocations } from "./api";
 import InfoAlert from './InfoAlert';
@@ -91,7 +92,8 @@ class App extends Component {
     const { events, tokenCheck } = this.state;
     return tokenCheck === false ? (
       <div className="App">
-        <Login />
+        {/* <Login /> */}
+        <Home />
       </div>
     ) : (
       <div className="App">

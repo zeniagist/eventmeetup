@@ -198,6 +198,11 @@ input[type="number"] {
   overflow: visible;
 }
 
+/* Home page */
+.homeTitle {
+  color: white;
+}
+
 /* Login Page */
 .eventDetails {
   text-shadow: 2px 2px #000000;
