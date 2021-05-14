@@ -15,6 +15,7 @@ body {
 
 .navbar-brand:hover {
   color: rgb(99, 44, 33) !important;
+  cursor: pointer;
 }
 
 #basic-navbar-nav {
@@ -44,7 +45,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   background: #ffffff;
-  padding: 20px;
+  padding: 5px;
   border: 4px solid #494949;
   display: inline-block;
   transition: all 0.4s ease 0s;
@@ -52,7 +53,41 @@ body {
   margin: 1rem;
 }
 
-/* Home page */
+/* Jumbotron */
+.jumbotron {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../travel.jpg") no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.jumbotron-container {
+  margin-top: 10%;
+  text-align: center;
+  width: 60%;
+}
+
+.jumbotron h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 10%;
+  text-shadow: 2px 2px #000000;
+}
+
+.jumbotron p {
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 1px 1px #000000;
+}
+
+.jumbtron-button:hover {
+  background-color: rgb(99, 44, 33);
+  color: white;
+}
+
 .event-container {
   height: 100%;
   width: 100%;
