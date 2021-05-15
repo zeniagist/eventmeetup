@@ -101,7 +101,6 @@ export default class Home extends Component {
               >View Privacy Documentation</Button> 
           </Container>
           </section>
-
         </div>
     )
   }
