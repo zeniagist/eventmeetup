@@ -1,5 +1,17 @@
 body {
   background: black;
+  font-family: "Raleway", serif;
+}
+
+.section-title {
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 5%;
+}
+
+.section-description {
+  font-size: 1.5em;
+  margin: auto 20% auto 20%;
 }
 
 /* Navbar */
@@ -8,62 +20,70 @@ body {
 }
 
 .navbar-brand {
-  color: black !important;
+  color: rgb(99, 44, 33) !important;
   margin-right: 20%;
   font-size: 2em;
+  font-weight: bold;
 }
 
 .navbar-brand:hover {
-  color: rgb(99, 44, 33) !important;
+  color: black !important;
   cursor: pointer;
 }
 
-#basic-navbar-nav {
+.event-navbar li {
+  display: inline;
+}
+
+.event-navbar li a {
   text-decoration: none;
   color: black;
   font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
 }
 
-.event-navbar-item {
-  margin-right: 5%;
-}
-
-.event-navbar-item:last-child {
-  margin-right: 0%;
-}
-
-.event-navbar-item:hover {
+.event-navbar li a:hover {
   color: rgb(99, 44, 33);
-  font-size: 1.1em;
+  font-size: 2em;
   cursor: pointer;
   font-weight: bold;
   letter-spacing: 2%;
 }
 
 .login-button {
-  color: #494949;
+  color: rgb(99, 44, 33);
   text-transform: uppercase;
   text-decoration: none;
   background: #ffffff;
+  font-weight: bold;
   padding: 5px;
-  border: 4px solid #494949;
+  border: 4px solid rgb(99, 44, 33);
   display: inline-block;
   transition: all 0.4s ease 0s;
   min-width: 10rem;
   margin: 1rem;
 }
 
+.login-button:hover {
+  color: #ffffff;
+  background: black;
+  border: 4px solid black;
+}
+
 /* Jumbotron */
 .jumbotron {
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../travel.jpg") no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../travel.jpg");
   background-attachment: fixed;
   background-size: cover;
+  width: 100%;
+  margin-top: 7%;
 }
 
 .jumbotron-container {
-  margin-top: 10%;
   text-align: center;
   width: 60%;
 }
@@ -73,14 +93,21 @@ body {
   font-weight: 700;
   color: #fff;
   letter-spacing: 2px;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   text-shadow: 2px 2px #000000;
 }
 
 .jumbotron p {
   font-size: 1.5rem;
+  font-weight: 600;
   color: #fff;
-  text-shadow: 1px 1px #000000;
+  text-shadow: 1.5px 1.5px #000000;
+  margin: auto 20% 5% 20%;
+}
+
+.jumbtron-button {
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
 .jumbtron-button:hover {
@@ -88,70 +115,32 @@ body {
   color: white;
 }
 
-.event-container {
-  height: 100%;
-  width: 100%;
-  margin-top: 10%;
-  text-shadow: 2px 2px #000000;
-  background-color: black;
-}
-
-.event-title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #fff;
-  margin: 0 0 1.5rem;
-}
-
-.event-title-details {
-  font-weight: 200;
-  color: #fff;
-  margin: auto 20% auto 20%;
-}
-
-.google-btn {
-  width: 184px;
-  height: 42px;
-  margin: 1rem;
-  background-color: #4285f4;
-  border-radius: 2px;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
-}
-.google-btn:hover {
-  box-shadow: 0 0 6px #4285f4;
-}
-.google-btn:active {
-  background: #1669f2;
-}
-.google-icon-wrapper {
-  position: absolute;
-  margin-top: 1px;
-  margin-left: 1px;
-  width: 40px;
-  height: 40px;
-  border-radius: 2px;
-  background-color: #fff;
-}
-.google-icon {
-  position: absolute;
-  margin-top: 11px;
-  margin-left: -8px;
-  width: 18px;
-  height: 18px;
-}
-.btn-text {
-  float: right;
-  margin: 11px 11px 0 0;
-  color: #fff;
-  font-size: 14px;
-  letter-spacing: 0.2px;
-  font-family: "Roboto";
-  text-decoration: none;
-}
-
-.privacyPolicy {
+/* About us */
+.about-container {
   color: white;
 }
 
-@media (min-width: 992px) {
+/* Privacy */
+.privacy-container {
+  margin-top: 5%;
+  background-color: white;
+  color: black;
+}
+
+.privacy-description {
+  margin-bottom: 2%;
+}
+
+.privacy-button,
+.privacy-button:focus {
+  font-weight: bold;
+  font-size: 1.1em;
+  background-color: rgb(99, 44, 33);
+  color: white;
+  margin-bottom: 2%;
+}
+
+.privacy-button:hover {
+  background-color: black;
+  color: white;
 }
