@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
-  Navbar, Nav, Form, Button, Jumbotron, Container,
+  Navbar, Form, Button, Jumbotron, Container,
 } from 'react-bootstrap';
 import './Home.css';
 import Scrollspy from 'react-scrollspy';
 
 export default class Home extends Component {
+  contactButton () {
+    alert('Demo website, message was not sent. Please email zeniagist@gmail.com if you have questions!');
+  }
   render() {
     return (
-        <div>
-          
+        <div>          
           <section>
             {/* Navbar */}
             <header>
@@ -99,6 +101,55 @@ export default class Home extends Component {
               variant="light" 
               className="privacy-button"
               >View Privacy Documentation</Button> 
+          </Container>
+          </section>
+
+          {/* Contact us */}
+          <section id='contact'>
+          <Container className='contact-container'>
+            <h1 className='section-title'>Contact us</h1>
+            <form className="cf">
+              <div class="half left cf">
+                <fieldset>
+                <label htmlFor="name">Name *</label>
+                <input 
+                  id="name" 
+                  name="name" 
+                  type="text"
+                  required
+                  />
+              </fieldset>
+              <fieldset>
+                <label htmlFor="email">Email *</label>
+                <input 
+                  id="email" 
+                  name="email" 
+                  type="email" 
+                  required  
+                />
+              </fieldset>
+              </div>
+
+              <div class="half right cf">
+                <fieldset>
+                  <label htmlFor="message">Message *</label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    type="textarea" 
+                    rows="3" 
+                    required 
+                  />
+                </fieldset>
+              </div>
+            
+            <Button  
+              className='contact-button'
+              onClick={()=> alert('Demo website, message was not sent. Please email zeniagist@gmail.com if you have questions!')}
+            >
+              Send message
+            </Button>
+            </form>
           </Container>
           </section>
         </div>

@@ -144,3 +144,52 @@ body {
   background-color: black;
   color: white;
 }
+
+/* Contact us */
+.contact-container {
+  color: white;
+  margin-top: 5%;
+}
+
+form {
+  max-width: 600px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+input,
+textarea {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  border-radius: 8px;
+  display: inline;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+
+.contact-button,
+.contact-button:focus {
+  font-weight: bold;
+  font-size: 1.1em;
+  background-color: rgb(99, 44, 33);
+  color: white;
+  margin-bottom: 2%;
+}
+.contact-button:hover {
+  background-color: white;
+  color: black;
+}
+
+textarea {
+  height: 126px;
+}
+
+@media (max-width: 480px) {
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+}
