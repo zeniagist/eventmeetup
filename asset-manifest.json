@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/eventmeetup/static/css/main.47352c50.chunk.css",
+    "main.css": "/eventmeetup/static/css/main.3a6b6575.chunk.css",
     "main.js": "/eventmeetup/static/js/main.8078432a.chunk.js",
     "main.js.map": "/eventmeetup/static/js/main.8078432a.chunk.js.map",
     "runtime-main.js": "/eventmeetup/static/js/runtime-main.6facc135.js",
@@ -14,7 +14,7 @@
     "service-worker.js": "/eventmeetup/service-worker.js",
     "service-worker.js.map": "/eventmeetup/service-worker.js.map",
     "static/css/2.4c97ca4f.chunk.css.map": "/eventmeetup/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.47352c50.chunk.css.map": "/eventmeetup/static/css/main.47352c50.chunk.css.map",
+    "static/css/main.3a6b6575.chunk.css.map": "/eventmeetup/static/css/main.3a6b6575.chunk.css.map",
     "static/js/2.892ecd62.chunk.js.LICENSE.txt": "/eventmeetup/static/js/2.892ecd62.chunk.js.LICENSE.txt",
     "static/media/Home.css": "/eventmeetup/static/media/travel.8b93c007.jpg"
   },
@@ -22,7 +22,7 @@
     "static/js/runtime-main.6facc135.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.892ecd62.chunk.js",
-    "static/css/main.47352c50.chunk.css",
+    "static/css/main.3a6b6575.chunk.css",
     "static/js/main.8078432a.chunk.js"
   ]
 }
